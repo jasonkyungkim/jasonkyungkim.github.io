@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
   <style>
   .wrapper {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   height: 15vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
   }
-    .name {
-      width: 9ch;
-      animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid;
-      font-family: Aleo;
-      font-size: 400%;
-      font-weight: 900
-    }
-      @keyframes typing {
-          from {
-              width: 0
-            }
-          }
+  .name {
+  width: 17ch;
+  animation: typing 3s steps(21), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 6em;
+}
+.content {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+}
 
-      @keyframes blink {
-        50% {
-          border-color: transparent
-        }
-      }
-    }
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
   </style>
 </head>
 
 
-<body>
-  <div class="wrapper">
-      <div class="name">
-        jason kim
-      </div>
-  </div>
+<body style = "background-color: lavender">
+  <div class = "wrapper">
+  <div class="name">
+  hello! I'm <b>Jason Kim</b>
+</div>
+</div>
+<div class = "content">
+  <p>
+    <br>junior at <b>Swarthmore College</b> &#128520; &#127891;
+    <br>
+    <br> double major in <b>computer science </b> and <b>statistics </b>&#128187;
+    <br>
+    <br> experience in <b> Python </b>, <b> pandas </b>, <b> numpy </b>,<b> HTML </b>,  <b> R </b>, and <b> C++ </b>.
+    <br>
+    <br> previous intern at <b> LotusFlare </b> and professor <b>Steve Wang</b>'s lab.
+  </p>
+</div>
+
 </body>
 </html>
