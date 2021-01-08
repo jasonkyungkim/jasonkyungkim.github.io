@@ -2,7 +2,14 @@
 <html>
 <head>
   <style>
-    h1 {
+  div.wrapper {
+    height: 100vh;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    div.typing {
       width: 22ch;
       animation: typing 2s steps(22), blink .5s step-end infinite alternate;
       white-space: nowrap;
@@ -10,7 +17,6 @@
       border-right: 3px solid;
       font-family: monospace;
       font-size: 2em;
-      text-align: center;
     }
       @keyframes typing {
           from {
@@ -29,7 +35,11 @@
 
 
 <body>
-<h1>jason kim</h1>
-<p>junior at Swarthmore College</p>
+  <div class="wrapper">
+      <div class="typing">
+        jason kim
+        junior at Swarthmore College
+      </div>
+  </div>
 </body>
 </html>
