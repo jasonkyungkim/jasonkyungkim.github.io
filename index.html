@@ -2,29 +2,40 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+  a:link{color:#FFFFFF;}
+  a:visited{color:#FFFFFF;}
+  a:hover{color:orange}
+  i:hover{color:orange}
   .wrapper {
-   height: 15vh;
+   height: 20vh;
    display: flex;
    align-items: center;
    justify-content: center;
   }
   .name {
-  width: 17ch;
-  animation: typing 3s steps(21), blink .5s step-end infinite alternate;
+  width: 20ch;
+  animation: typing 2s steps(20), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 6em;
+  border-right: 5px solid orange;
+  color:  #fff;
+  font-family: monospace;
+  font-size: 8em;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💥</text></svg>"), auto;
 }
-.content {
-  height: 15vh;
+.container {
+  height: 40vh;
   display: flex;
+  color:  #fff;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.5em;
+  font-size: 2em;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💩</text></svg>"), auto;
 }
 
 @keyframes typing {
@@ -38,27 +49,47 @@
     border-color: transparent
   }
 }
+
   </style>
 </head>
 
 
-<body style = "background-color: lavender">
+<body style = "background: #333">
   <div class = "wrapper">
   <div class="name">
-  hello! I'm <b>Jason Kim</b>
+  hello! I'm <span style = "color: orange"><strong>Jason Kim</strong> </span>
 </div>
 </div>
-<div class = "content">
-  <p>
-    <br>junior at <b>Swarthmore College</b> &#128520; &#127891;
-    <br>
-    <br> double major in <b>computer science </b> and <b>statistics </b>&#128187;
-    <br>
-    <br> experience in <b> Python </b>, <b> pandas </b>, <b> numpy </b>,<b> HTML </b>,  <b> R </b>, and <b> C++ </b>.
-    <br>
-    <br> previous intern at <b> LotusFlare </b> and professor <b>Steve Wang</b>'s lab.
-  </p>
+
+  <div class = "jumbotron jumbotron-fluid ">
+    <div class = "container">
+    <section>
+
+      <p>
+        junior at <b><a href="https://www.swarthmore.edu/">Swarthmore College</a></b> &#127979&#127891;
+        <br>
+        <br> double major in <span style = "color: orange"><b>computer science </b> </span> and <span style = "color: orange"><b>statistics </b> </span>&#128187&#128200&#128202;
+        <br>
+        <br> experience in <b> Python&#128013; , R, C++,  C, pandas&#128060;,  numpy, Jupyter Notebook, HTML, CSS, and JS </b>
+        <br>
+        <br> previous intern at <a href="https://lotusflare.com/"><b> LotusFlare </b></a>&#128293; and professor <a href="https://www.swarthmore.edu/NatSci/swang1/personnel.html#99"><b>Steve Wang</b>'s lab </a>👨‍💻
+      </p>
+
+      <h1 class = "links"> <span style = "color:orange">let's connect!</span> </h1>
+        <a href="https://github.com/ckkim-rv"><i class="fa fa-github fa-lg icon"  ></i></a>
+        <a href="https://www.facebook.com/jason.kim.988711/"><i class="fa fa-facebook fa-lg icon" ></i></a>
+        <a href="https://www.linkedin.com/in/jason-chongkyung-k-589345135/"><i class="fa fa-linkedin fa-lg icon"></i></a>
+        <a href="https://twitter.com/jason62kim"><i class="fa fa-twitter fa-lg icon"></i></a>
+        <a href="https://www.instagram.com/jasonkimbapp/"><i class="fa fa-instagram fa-lg icon"></i></a>
+        <a href="mailto:ckim5@swarthmore.edu"><i class="fa fa-envelope fa-lg icon"></i></a>
+      <h2 class = "resume"> Here is my <a href="https://drive.google.com/file/d/1q7pvdLJPpi5g5iFe6g4BiiKYb4If0raF/view?usp=sharing"> resume</a>!
+  </section>
+
 </div>
+</div>
+
+
+
 
 </body>
 </html>
