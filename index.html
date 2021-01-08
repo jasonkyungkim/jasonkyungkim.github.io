@@ -2,21 +2,21 @@
 <html>
 <head>
   <style>
-  div.wrapper {
+  .wrapper {
     height: 100vh;
-    /*This part is important for centering*/
     display: flex;
     align-items: center;
     justify-content: center;
   }
-    div.typing {
-      width: 22ch;
+    .name {
+      width: 9ch;
       animation: typing 2s steps(22), blink .5s step-end infinite alternate;
       white-space: nowrap;
       overflow: hidden;
       border-right: 3px solid;
-      font-family: monospace;
-      font-size: 2em;
+      font-family: Marker Felt;
+      font-size: 400%;
+      font-weight: 900
     }
       @keyframes typing {
           from {
@@ -36,9 +36,8 @@
 
 <body>
   <div class="wrapper">
-      <div class="typing">
+      <div class="name">
         jason kim
-        junior at Swarthmore College
       </div>
   </div>
 </body>
