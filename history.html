@@ -5,39 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
     <meta name="description" content="Jason Kim personal website">
     <meta name="author" content="Jason Kim">
-    <meta property="og:url" content="https://ckkim-rv.github.io/">
-    <title>Intro | Jason Kim</title>
+    <meta property="og:url" content="https://ckkim-rv.github.io/history.html">
+    <title>History | Jason Kim</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="canonical" href="https://ckkim-rv.github.io/">
-    <meta property="og:title" content="Intro">
+    <link rel="canonical" href="https://ckkim-rv.github.io/history.html">
+    <meta property="og:title" content="History">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="cover.css" rel="stylesheet">
 
     <style>
-    a:link{color:#FFFFFF;
-    text-decoration: none;}
-    a:visited{color:#FFFFFF;}
-    a:hover{color:pink}
-    i:hover{color:pink}
+    /* width */
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: pink;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(202, 151, 203);
+    }
+
     .hpink{color:pink}
-    .name {
-    animation: typing 3s steps(20), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 5px solid pink;
-  }
-  @keyframes typing {
-    from {
-      width: 0
+
+    .img_txt1{
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      color: white;
+      opacity: 0;
     }
-  }
-  @keyframes blink {
-    50% {
-      border-color: transparent
+    .img_txt2{
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      color: white;
+      opacity: 0;
     }
-  }
+    .img_txt3{
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      color: white;
+      opacity: 0;
+    }
+
+    .container1:hover .img_txt1{
+      opacity: 1
+    }
+    .container2:hover .img_txt2{
+      opacity: 1
+    }
+    .container3:hover .img_txt3{
+      opacity: 1
+    }
+    img{
+      width: 400px;
+      height: 200px;
+      border-radius: 60%;
+      -webkit-filter: blur(3px);
+    	filter: blur(3px);
+    	-webkit-transition: .3s ease-in-out;
+    	transition: .3s ease-in-out;
+    }
+
+    img:hover{
+      -webkit-filter: blur(0);
+       filter: blur(0);
+       border-radius: 5%
+    }
+
+      /* figure:hover+img_txt{
+        color: pink
+        } */
+
+
     </style>
   </head>
+
   <body class="d-flex text-center text-white bg-dark">
     <div class="cover-container d-flex w-100 p-3 mx-auto flex-column">
       <header class="mb-auto">
@@ -62,20 +114,46 @@
 
       <main class="jumbotron jumbotron-fluid ">
         <main class="px-7">
+          <div class="container">
+            <br>
+            <br>
           <h1><Huge><strong><span class="hpink">History</span> of my <span class ="hpink">Personal Websites</span></strong></Huge> </span></h1>
           <br>
-          <h2><a href="https://ckkim-rv.github.io/history/www.cs.swarthmore.edu.html">College Freshman year (2018.09)</h2>
-          <img src="https://ckkim-rv.github.io/screenshots/v1.png" alt="version 1" style="width:400px;height:200px;"></a>
+          <br>
+          <h2><a href="https://ckkim-rv.github.io/history/www.cs.swarthmore.edu.html"><strong>College Freshman year (2018.09)</strong></h2>
+            <br>
+          <div class="container1"><img src="https://ckkim-rv.github.io/screenshots/v1.png" alt="version 1"></a>
+          <br>
+          <br>
+          <div class ="img_txt1">
             <p>This is the first website that I made (in like a day) and abandonded for ages.
-              <br>This one makes me cringe a little bit, but we all gotta start somewhere, right? </p>
-          <h2><a href ="https://ckkim-rv.github.io/history/v1.html">Quarantine Season (2020.01)</h2>
-          <img src="https://ckkim-rv.github.io/screenshots/v2.PNG" alt="version 2" style="width:400px;height:200px;"></a>
+              <br>This one makes me cringe a little bit, but we all gotta start somewhere, right? </p></div>
+              <br>
+              <br>
+            </div>
+          <h2><a href ="https://ckkim-rv.github.io/history/v1.html"><strong>Quarantine Season (2020.01)</strong></h2>
+            <br>
+          <div class="container2"><img src="https://ckkim-rv.github.io/screenshots/v2.PNG" alt="version 2"></figure></a>
+          <br>
+          <br>
+          <div class ="img_txt2">
             <p> I have been long gone from the web development world, working mostly on data science projects,
-              <br> but I decided that I should create my own website and this is where I started </p>
-            <h2><a href="https://ckkim-rv.github.io/"> Current Version</h2>
-            <img src="https://ckkim-rv.github.io/screenshots/v3.PNG" alt="version 3" style="width:400px;height:200px;"></a>
-            <p> This site you are on right now is my current version of my personal website.
-            <br> I have a feeling that this, too, will be archived in the future as one of my past versions :)</p>
+              <br> but I decided that I should create my own website and this is where I started </p></div>
+              <br>
+              <br>
+            </div>
+            <h2><a href="https://ckkim-rv.github.io/"><strong> Current Version </strong></h2>
+              <br>
+            <div class="container3"><img src="https://ckkim-rv.github.io/screenshots/v3.PNG" alt="version 3"></a>
+            <br>
+            <br>
+            <div class ="img_txt3"><p>
+      This site you are on right now is my current version of my personal website.
+        <br> I have a feeling that this, too, will be archived in the future as one of my past versions :)</p></div>
+       <br>
+       <br>
+       <br>
+     </div>
         </main>
       </main>
 
@@ -88,8 +166,6 @@
     <a href="mailto:ckim5@swarthmore.edu"><i class="fa fa-envelope fa-lg icon"></i></a></p>
   </footer>
 </div>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
