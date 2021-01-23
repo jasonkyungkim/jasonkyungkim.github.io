@@ -1,0 +1,33 @@
+.card-body{
+  background:pink;
+  box-shadow: 0 3px 16px 0 pink;
+}
+
+.btn:hover {
+  background-color: pink;
+  color: white;
+  box-shadow: 0 3px 16px 0 black;
+}
+.button1 {
+background-color: pink;
+color: black;
+border: 2px solid pink;
+/* box-shadow: 0 8px 16px 0 pink; */
+}
+
+.button1:hover {
+background-color: pink;
+color: white;
+box-shadow: 0 3px 16px 0 white;
+}
+
+.dwnld{
+  color: black;
+}
+/* h1{
+  color:pink;
+  font-weight: bold
+}
+h2{
+  font-weight: bold
+} */
