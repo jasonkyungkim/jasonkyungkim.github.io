@@ -1,0 +1,43 @@
+.img_txt1{
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  color: white;
+  opacity: 0;
+}
+.img_txt2{
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  color: white;
+  opacity: 0;
+}
+.img_txt3{
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  color: white;
+  opacity: 0;
+}
+
+.container1:hover .img_txt1{
+  opacity: 1
+}
+.container2:hover .img_txt2{
+  opacity: 1
+}
+.container3:hover .img_txt3{
+  opacity: 1
+}
+img{
+  max-width: 50%;
+  height: auto;
+  border-radius: 60%;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+img:hover{
+  -webkit-filter: blur(0);
+   filter: blur(0);
+   border-radius: 5%
+}

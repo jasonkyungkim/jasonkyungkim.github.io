@@ -1,0 +1,10 @@
+.btn:hover {
+  background-color: pink;
+  color: white;
+  box-shadow: 0 3px 16px 0 black;
+}
+
+.card-body{
+  background:pink;
+  box-shadow: 0 3px 16px 0 pink;
+}
