@@ -1,3 +1,8 @@
+.manu:hover{text-shadow: .4rem .05rem 3rem rgba(249, 83, 83)}
+.twitter:hover{text-shadow: .4rem .05rem 3rem rgba(80, 177, 249)}
+.whale:hover{text-shadow:.4rem .05rem 3rem rgba(78, 146, 150)}
+.lflare:hover{text-shadow:.4rem .05rem 3rem orange}
+
 .btn:hover {
   background-color: pink;
   color: white;
