@@ -30,8 +30,6 @@ img{
   max-width: 70%;
   height: auto;
   border-radius: 60%;
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
