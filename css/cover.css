@@ -52,7 +52,7 @@ i:hover{color:pink}
   max-width: 60em;
 }
 .avatar {
-  max-width: 100%;
+  max-width: 40%;
    height: auto;
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 5px 0px white;
