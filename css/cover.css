@@ -27,6 +27,9 @@
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
+.pink {
+  color: pink
+}
 
 /*
  * Base structure
