@@ -267,7 +267,7 @@
                 speed: $(this).is('[data-tilt-speed]') ? $(this).data('tilt-speed') : '400',
                 transition: $(this).is('[data-tilt-transition]') ? $(this).data('tilt-transition') : true,
                 disableAxis: $(this).is('[data-tilt-disable-axis]') ? $(this).data('tilt-disable-axis') : null,
-                axis: $(this).is('[data-tilt-axis]') ? $(this).data('tilt-axis') : null,
+                axis: $(this).is('[data-tilt-axis]') ? $(this).data('tilt-axis') :  null,
                 reset: $(this).is('[data-tilt-reset]') ? $(this).data('tilt-reset') : true,
                 glare: $(this).is('[data-tilt-glare]') ? $(this).data('tilt-glare') : true,
                 maxGlare: $(this).is('[data-tilt-maxglare]') ? $(this).data('tilt-maxglare') : 1,
