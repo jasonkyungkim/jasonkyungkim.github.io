@@ -14,4 +14,23 @@ anime.timeline({loop: false})
     // duration: 1000,
     // easing: "easeOutExpo",
     // delay: 1000
+  }).add({
+    targets: '.ml15 .word',
+    scale: [10,1],
+    opacity: [0,1],
+    easing: "easeOutCirc",
+    duration: 500,
+    delay: (el, i) => 1400 * i
+  }).add({
+    targets: '.ml15',
+    opacity: 1,
+    // duration: 1000,
+    // easing: "easeOutExpo",
+    // delay: 1000
   });
+;
+
+
+// sleep(10);
+
+  // anime.timeline({loop: false})
