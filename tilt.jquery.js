@@ -263,13 +263,13 @@
                 maxTilt: $(this).is('[data-tilt-max]') ? $(this).data('tilt-max') : 20,
                 perspective: $(this).is('[data-tilt-perspective]') ? $(this).data('tilt-perspective') : 300,
                 easing: $(this).is('[data-tilt-easing]') ? $(this).data('tilt-easing') : 'cubic-bezier(.03,.98,.52,.99)',
-                scale: $(this).is('[data-tilt-scale]') ? $(this).data('tilt-scale') : '1.1',
+                scale: $(this).is('[data-tilt-scale]') ? $(this).data('tilt-scale') : '1.07',
                 speed: $(this).is('[data-tilt-speed]') ? $(this).data('tilt-speed') : '400',
                 transition: $(this).is('[data-tilt-transition]') ? $(this).data('tilt-transition') : true,
                 disableAxis: $(this).is('[data-tilt-disable-axis]') ? $(this).data('tilt-disable-axis') : null,
-                axis: $(this).is('[data-tilt-axis]') ? $(this).data('tilt-axis') : 'x',
+                axis: $(this).is('[data-tilt-axis]') ? $(this).data('tilt-axis') :  null,
                 reset: $(this).is('[data-tilt-reset]') ? $(this).data('tilt-reset') : true,
-                glare: $(this).is('[data-tilt-glare]') ? $(this).data('tilt-glare') : false,
+                glare: $(this).is('[data-tilt-glare]') ? $(this).data('tilt-glare') : true,
                 maxGlare: $(this).is('[data-tilt-maxglare]') ? $(this).data('tilt-maxglare') : 1,
             }, options);
 
