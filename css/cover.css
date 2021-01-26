@@ -27,9 +27,7 @@
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-.pink {
-  color: pink
-}
+
 
 /*
  * Base structure
@@ -54,7 +52,6 @@ i:hover{color:pink}
   max-width: 60em;
 }
 .avatar {
-  /* vertical-align: middle; */
   max-width: 100%;
    height: auto;
   border-radius: 50%;
@@ -64,7 +61,6 @@ i:hover{color:pink}
 }
  .ml15 .word {
    display: inline-block;
-   /* line-height: 1em; */
  }
 
  .ml6 {
