@@ -16,7 +16,7 @@ anime.timeline({loop: false})
     // delay: 1000
   }).add({
     targets: '.ml15 .word',
-    scale: [10,1],
+    scale: [2,1],
     opacity: [0,1],
     easing: "easeOutCirc",
     duration: 500,
