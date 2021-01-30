@@ -51,19 +51,23 @@ i:hover{color:pink}
 .cover-container {
   max-width: 60em;
 }
+
+.highlight{
+  background: linear-gradient(180deg,rgba(255,255,255,0) 80%, rgba(255, 192, 203,.65) 20% );
+  display:inline;
+}
+
 .avatar {
   max-width: 40%;
    height: auto;
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 5px 0px white;
   -moz-box-shadow: 2px 2px 5px 0px white;
-  box-shadow: 0 3px 30px 0 pink;
+  box-shadow: 0 3px 70px 0 pink;
 }
+
  .ml15 .word {
    display: inline-block;
- }
-
- .ml6 {
  }
 
 .ml6 .text-wrapper {
