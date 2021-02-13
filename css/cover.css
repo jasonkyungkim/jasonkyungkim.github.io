@@ -2,13 +2,13 @@
  * Globals
  */
 
- .name {
- /* text-shadow:.4rem .05rem .09rem white; */
+ /* .name {
+ text-shadow:.4rem .05rem .09rem white;
  animation: typing 3s steps(20), blink .5s step-end infinite alternate;
  white-space: nowrap;
  overflow: hidden;
  border-right: 5px solid pink;
- }
+ } */
 
  @keyframes typing {
  from {
