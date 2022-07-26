@@ -2,12 +2,12 @@ img:hover{
   box-shadow: 0 3px 16px 0 white;
 }
 .btn:hover {
-  background-color: pink;
+  background-color: crimson;
   color: white;
   box-shadow: 0 3px 16px 0 black;
 }
 
 .card-body{
-  background:pink;
-  box-shadow: 0 3px 16px 0 pink;
+  background:crimson;
+  box-shadow: 0 3px 16px 0 crimson;
 }

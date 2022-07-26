@@ -7,7 +7,7 @@
  animation: typing 3s steps(20), blink .5s step-end infinite alternate;
  white-space: nowrap;
  overflow: hidden;
- border-right: 5px solid pink;
+ border-right: 5px solid crimson;
  } */
 
  @keyframes typing {
@@ -36,7 +36,7 @@
 
 body {
   height: auto;
-  text-shadow: 0 .05rem .1rem pink;
+  text-shadow: 0 .05rem .1rem crimson;
   box-shadow: inset 0 0 20rem rgba(0, 0, 0, 1);
   min-height: 100%;
 }
@@ -48,8 +48,8 @@ html{
 a:link{color:#FFFFFF;
 text-decoration: none;}
 a:visited{color:#FFFFFF;}
-a:hover{color:pink}
-i:hover{color:pink}
+a:hover{color:crimson}
+i:hover{color:crimson}
 
 .cover-container {
   max-width: 60em;
@@ -61,7 +61,7 @@ i:hover{color:pink}
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 5px 0px white;
   -moz-box-shadow: 2px 2px 5px 0px white;
-  box-shadow: 0 3px 70px 0 pink;
+  box-shadow: 0 3px 70px 0 crimson;
 }
 
  .ml15 .word {
@@ -85,12 +85,12 @@ display: inline-block;
  }
 
  ::-webkit-scrollbar-thumb {
-   background: pink;
-   border-radius: 10px;
+   background: white;
+   border-radius: 5px;
  }
 
  ::-webkit-scrollbar-thumb:hover {
-   background: rgba(202, 151, 203);
+   background: black;
  }
 .nav-masthead .nav-link {
   padding: .25rem 0;
@@ -102,7 +102,7 @@ display: inline-block;
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: pink;
+  border-bottom-color: crimson;
 }
 
 .nav-masthead .nav-link + .nav-link {
