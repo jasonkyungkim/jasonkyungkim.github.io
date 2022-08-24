@@ -2,12 +2,12 @@ img:hover{
   box-shadow: 0 3px 16px 0 white;
 }
 .btn:hover {
-  background-color: crimson;
+  background-color: rgb(240, 128, 128);
   color: white;
-  box-shadow: 0 3px 16px 0 black;
+  box-shadow: 0 3px 16px 0 white;
 }
 
 .card-body{
   background: rgb(240, 128, 128);
-  box-shadow: 0 3px 16px 0 crimson;
+  box-shadow: 0 3px 16px 0 rgb(240, 128, 128);
 }

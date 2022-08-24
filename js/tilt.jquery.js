@@ -63,102 +63,102 @@
         /**
          * When user mouse enters tilt element
          */
-        const mouseEnter = function(event) {
-            this.ticking = false;
-            $(this).css({'will-change': 'transform'});
-            setTransition.call(this);
-
-            // Trigger change event
-            $(this).trigger("tilt.mouseEnter");
-        };
+        // const mouseEnter = function(event) {
+        //     this.ticking = false;
+        //     $(this).css({'will-change': 'transform'});
+        //     setTransition.call(this);
+        //
+        //     // Trigger change event
+        //     $(this).trigger("tilt.mouseEnter");
+        // };
 
         /**
          * Return the x,y position of the mouse on the tilt element
          * @returns {{x: *, y: *}}
          */
-        const getMousePositions = function(event) {
-            if (typeof(event) === "undefined") {
-                event = {
-                    pageX: $(this).offset().left + $(this).outerWidth() / 2,
-                    pageY: $(this).offset().top + $(this).outerHeight() / 2
-                };
-            }
-            return {x: event.pageX, y: event.pageY};
-        };
+        // const getMousePositions = function(event) {
+        //     if (typeof(event) === "undefined") {
+        //         event = {
+        //             pageX: $(this).offset().left + $(this).outerWidth() / 2,
+        //             pageY: $(this).offset().top + $(this).outerHeight() / 2
+        //         };
+        //     }
+        //     return {x: event.pageX, y: event.pageY};
+        // };
 
         /**
          * When user mouse moves over the tilt element
          */
-        const mouseMove = function(event) {
-            this.mousePositions = getMousePositions(event);
-            requestTick.call(this);
-        };
+        // const mouseMove = function(event) {
+        //     this.mousePositions = getMousePositions(event);
+        //     requestTick.call(this);
+        // };
 
         /**
          * When user mouse leaves tilt element
          */
-        const mouseLeave = function() {
-            setTransition.call(this);
-            this.reset = true;
-            requestTick.call(this);
-
-            // Trigger change event
-            $(this).trigger("tilt.mouseLeave");
-        };
+        // const mouseLeave = function() {
+        //     setTransition.call(this);
+        //     this.reset = true;
+        //     requestTick.call(this);
+        //
+        //     // Trigger change event
+        //     $(this).trigger("tilt.mouseLeave");
+        // };
 
         /**
          * Get tilt values
          *
          * @returns {{x: tilt value, y: tilt value}}
          */
-        const getValues = function() {
-            const width = $(this).outerWidth();
-            const height = $(this).outerHeight();
-            const left = $(this).offset().left;
-            const top = $(this).offset().top;
-            const percentageX = (this.mousePositions.x - left) / width;
-            const percentageY = (this.mousePositions.y - top) / height;
-            // x or y position inside instance / width of instance = percentage of position inside instance * the max tilt value
-            const tiltX = ((this.settings.maxTilt / 2) - ((percentageX) * this.settings.maxTilt)).toFixed(2);
-            const tiltY = (((percentageY) * this.settings.maxTilt) - (this.settings.maxTilt / 2)).toFixed(2);
-            // angle
-            const angle = Math.atan2(this.mousePositions.x - (left+width/2),- (this.mousePositions.y - (top+height/2)) )*(180/Math.PI);
-            // Return x & y tilt values
-            return {tiltX, tiltY, 'percentageX': percentageX * 100, 'percentageY': percentageY * 100, angle};
-        };
+        // const getValues = function() {
+        //     const width = $(this).outerWidth();
+        //     const height = $(this).outerHeight();
+        //     const left = $(this).offset().left;
+        //     const top = $(this).offset().top;
+        //     const percentageX = (this.mousePositions.x - left) / width;
+        //     const percentageY = (this.mousePositions.y - top) / height;
+        //     // x or y position inside instance / width of instance = percentage of position inside instance * the max tilt value
+        //     const tiltX = ((this.settings.maxTilt / 2) - ((percentageX) * this.settings.maxTilt)).toFixed(2);
+        //     const tiltY = (((percentageY) * this.settings.maxTilt) - (this.settings.maxTilt / 2)).toFixed(2);
+        //     // angle
+        //     const angle = Math.atan2(this.mousePositions.x - (left+width/2),- (this.mousePositions.y - (top+height/2)) )*(180/Math.PI);
+        //     // Return x & y tilt values
+        //     return {tiltX, tiltY, 'percentageX': percentageX * 100, 'percentageY': percentageY * 100, angle};
+        // };
 
         /**
          * Update tilt transforms on mousemove
          */
-        const updateTransforms = function() {
-            this.transforms = getValues.call(this);
-
-            if (this.reset) {
-                this.reset = false;
-                $(this).css('transform', `perspective(${this.settings.perspective}px) rotateX(0deg) rotateY(0deg)`);
-
-                // Rotate glare if enabled
-                if (this.settings.glare){
-                    this.glareElement.css('transform', `rotate(180deg) translate(-50%, -50%)`);
-                    this.glareElement.css('opacity', `0`);
-                }
-
-                return;
-            } else {
-                $(this).css('transform', `perspective(${this.settings.perspective}px) rotateX(${this.settings.disableAxis === 'x' ? 0 : this.transforms.tiltY}deg) rotateY(${this.settings.disableAxis === 'y' ? 0 : this.transforms.tiltX}deg) scale3d(${this.settings.scale},${this.settings.scale},${this.settings.scale})`);
-
-                // Rotate glare if enabled
-                if (this.settings.glare){
-                    this.glareElement.css('transform', `rotate(${this.transforms.angle}deg) translate(-50%, -50%)`);
-                    this.glareElement.css('opacity', `${this.transforms.percentageY * this.settings.maxGlare / 100}`);
-                }
-            }
-
-            // Trigger change event
-            $(this).trigger("change", [this.transforms]);
-
-            this.ticking = false;
-        };
+        // const updateTransforms = function() {
+        //     this.transforms = getValues.call(this);
+        //
+        //     if (this.reset) {
+        //         this.reset = false;
+        //         $(this).css('transform', `perspective(${this.settings.perspective}px) rotateX(0deg) rotateY(0deg)`);
+        //
+        //         // Rotate glare if enabled
+        //         if (this.settings.glare){
+        //             this.glareElement.css('transform', `rotate(180deg) translate(-50%, -50%)`);
+        //             this.glareElement.css('opacity', `0`);
+        //         }
+        //
+        //         return;
+        //     } else {
+        //         $(this).css('transform', `perspective(${this.settings.perspective}px) rotateX(${this.settings.disableAxis === 'x' ? 0 : this.transforms.tiltY}deg) rotateY(${this.settings.disableAxis === 'y' ? 0 : this.transforms.tiltX}deg) scale3d(${this.settings.scale},${this.settings.scale},${this.settings.scale})`);
+        //
+        //         // Rotate glare if enabled
+        //         if (this.settings.glare){
+        //             this.glareElement.css('transform', `rotate(${this.transforms.angle}deg) translate(-50%, -50%)`);
+        //             this.glareElement.css('opacity', `${this.transforms.percentageY * this.settings.maxGlare / 100}`);
+        //         }
+        //     }
+        //
+        //     // Trigger change event
+        //     $(this).trigger("change", [this.transforms]);
+        //
+        //     this.ticking = false;
+        // };
 
         /**
          * Prepare elements
