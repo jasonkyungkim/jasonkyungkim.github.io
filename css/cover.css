@@ -56,9 +56,9 @@ i:hover{color:crimson}
 }
 
 .avatar {
-  max-width: 40%;
+  max-width: 90%;
    height: auto;
-  border-radius: 50%;
+  border-radius: 90%;
   -webkit-box-shadow: 2px 2px 5px 0px white;
   -moz-box-shadow: 2px 2px 5px 0px white;
   box-shadow: 0 3px 70px 0 crimson;
