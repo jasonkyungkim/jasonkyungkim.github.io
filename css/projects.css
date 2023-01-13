@@ -8,6 +8,8 @@ img:hover{
 }
 
 .card-body{
-  background: rgb(240, 128, 128);
+  /* background: rgb(240, 128, 128); */
+  background: black;
+
   box-shadow: 0 3px 16px 0 rgb(240, 128, 128);
 }
