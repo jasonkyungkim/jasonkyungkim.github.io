@@ -74,7 +74,7 @@
 
         /**
          * Return the x,y position of the mouse on the tilt element
-         * @returns {{x: *, y: *}}
+         * 
          */
         // const getMousePositions = function(event) {
         //     if (typeof(event) === "undefined") {
@@ -109,7 +109,7 @@
         /**
          * Get tilt values
          *
-         * @returns {{x: tilt value, y: tilt value}}
+         * 
          */
         // const getValues = function() {
         //     const width = $(this).outerWidth();
