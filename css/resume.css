@@ -1,22 +1,22 @@
 .card-body{
-  background:crimson;
-  box-shadow: 0 3px 16px 0 crimson;
+  background:white;
+  box-shadow: 0 3px 16px 0 white;
 }
 
 .btn:hover {
-  background-color: crimson;
+  background-color: white;
   color: white;
   box-shadow: 0 3px 16px 0 black;
 }
 .button1 {
-background-color: crimson;
+background-color: white;
 color: black;
-border: 2px solid crimson;
-/* box-shadow: 0 8px 16px 0 crimson; */
+border: 2px solid white;
+/* box-shadow: 0 8px 16px 0 white; */
 }
 
 .button1:hover {
-background-color: crimson;
+background-color: white;
 color: white;
 box-shadow: 0 3px 16px 0 white;
 }
