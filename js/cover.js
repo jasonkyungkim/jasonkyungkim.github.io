@@ -34,16 +34,4 @@ anime.timeline({loop: false})
   //   msnry.layout();
   // });
 
-  var $grid = document.querySelector('.row');
-        var msnry = new Masonry($grid, {
-            itemSelector: '.col',
-            percentPosition: true
-        });
-
-        var $images = $grid.querySelectorAll('.card img');
-        $images.forEach(function (el) {
-            el.addEventListener('load', function () {
-                console.log("Image is loaded: " + el.getAttribute("src"));
-                msnry.layout();
-            });
-        });
+  
