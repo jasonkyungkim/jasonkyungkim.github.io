@@ -28,3 +28,12 @@ anime.timeline({loop: false})
 // sleep(10);
 
   // anime.timeline({loop: false})
+
+  // init Masonry
+var $grid = $('.grid').masonry({
+  // options...
+});
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry('layout');
+});

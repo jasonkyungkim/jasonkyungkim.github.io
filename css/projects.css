@@ -13,3 +13,11 @@ img:hover{
 
   box-shadow: 0 3px 16px 0 white;
 }
+
+/* 
+$(grid).ready(function(){
+  $('img').load(function(){
+      $(".content_photo").masonry();
+  });
+  $(".content_photo").masonry();
+}) */
