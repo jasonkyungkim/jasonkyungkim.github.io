@@ -79,7 +79,7 @@
 <div>
   
   <div class="grid">
-      <div class="row cols-1 row-cols-md-4 g-4"  data-masonry='{"percentPosition": true }'>
+      <div class="row cols-1 row-cols-md-4 g-4"  data-masonry='{"percentPosition": true,  "itemSelector": ".col"  }'>
         <div class="col">
           <div class="card h-auto border-dark text-dark" data-tilt>
             <img
@@ -268,6 +268,21 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script> -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script>
+  var $grid = document.querySelector('.row');
+  var msnry = new Masonry($grid, {
+      itemSelector: '.col',
+      percentPosition: true
+  });
+
+  var $images = $grid.querySelectorAll('.card img');
+  $images.forEach(function (el) {
+      el.addEventListener('load', function () {
+          console.log("Image is loaded: " + el.getAttribute("src"));
+          msnry.layout();
+      });
+  });
+</script>
 <script src="js/tilt.jquery.js"></script>
 <script src="js/cover.js"></script>
 </body>

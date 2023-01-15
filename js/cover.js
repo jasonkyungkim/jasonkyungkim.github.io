@@ -29,11 +29,21 @@ anime.timeline({loop: false})
 
   // anime.timeline({loop: false})
 
-  // init Masonry
-var $grid = $('.grid').masonry({
-  // options...
-});
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry('layout');
-});
+  // Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+  //   var msnry = new Masonry('.grid');
+  //   msnry.layout();
+  // });
+
+  var $grid = document.querySelector('.row');
+        var msnry = new Masonry($grid, {
+            itemSelector: '.col',
+            percentPosition: true
+        });
+
+        var $images = $grid.querySelectorAll('.card img');
+        $images.forEach(function (el) {
+            el.addEventListener('load', function () {
+                console.log("Image is loaded: " + el.getAttribute("src"));
+                msnry.layout();
+            });
+        });
