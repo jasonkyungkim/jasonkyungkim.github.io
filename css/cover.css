@@ -61,7 +61,7 @@ i:hover{color:crimson}
   border-radius: 90%;
   -webkit-box-shadow: 2px 2px 5px 0px white;
   -moz-box-shadow: 2px 2px 5px 0px white;
-  box-shadow: 0 3px 70px 0 white;
+  box-shadow: 0 3px 70px 0 black;
 }
 
  .ml15 .word {
