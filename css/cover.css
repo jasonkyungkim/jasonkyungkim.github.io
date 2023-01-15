@@ -102,7 +102,7 @@ display: inline-block;
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: crimson;
+  border-bottom-color: white;
 }
 
 .nav-masthead .nav-link + .nav-link {

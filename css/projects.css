@@ -2,7 +2,7 @@ img:hover{
   box-shadow: 0 3px 16px 0 white;
 }
 .btn:hover {
-  background-color: rgb(240, 128, 128);
+  background-color: white;
   color: white;
   box-shadow: 0 3px 16px 0 white;
 }
@@ -11,5 +11,5 @@ img:hover{
   /* background: rgb(240, 128, 128); */
   background: black;
 
-  box-shadow: 0 3px 16px 0 rgb(240, 128, 128);
+  box-shadow: 0 3px 16px 0 white;
 }
