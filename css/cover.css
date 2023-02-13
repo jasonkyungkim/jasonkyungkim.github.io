@@ -2,13 +2,6 @@
  * Globals
  */
 
- /* .name {
- text-shadow:.4rem .05rem .09rem white;
- animation: typing 3s steps(20), blink .5s step-end infinite alternate;
- white-space: nowrap;
- overflow: hidden;
- border-right: 5px solid crimson;
- } */
 
  @keyframes typing {
  from {
@@ -17,7 +10,7 @@
  }
  @keyframes blink {
  50% {
-   border-color: transparent
+   border-color: transparent;
  }
  }
 /* Custom default button */
