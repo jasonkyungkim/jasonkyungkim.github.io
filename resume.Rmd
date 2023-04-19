@@ -32,24 +32,12 @@ output:
 #### **Experience**:
 
 ##### Data Science Intern @ The Hershey Company
-  - Leverage behavioral data to predict users’ satisfaction with their ad experience
 
 ##### Undergraduate Researcher @ Steve Wang Lab | [View Research Poster](https://jasonkyungkim.github.io/whale_poster.pdf)
-  - Estimated the population size of North Atlantic right whales, an endangered species, using logistic regression under a Bayesian framework.
-  - Found errors in the North Atlantic Right Whale Consortium (NARWC) dataset that contradicted relevant papers; reported to NARWC for correction
-  - Computed point estimate that was within the 95\% confidence interval of other top NARWC papers' models
-  - Added 13 new features and controlled multicolinearity, reducing the false positive rate by 60\%, while keeping the false negative the same
-  - Implemented a parallelized algorithm that improved runtime of the main simulation algorithm by 40\%
-  - Presented results to an audience of 450+ at the annual NARWC conference
   
 ##### Data Engineering Intern @ Telnyx
-- One of the three founding members of the data engineering team
-- Developed Airflow tasks and built supporting pipelines to automate getting data from different internal and external API endpoints to process and backup into the PostgreSQL databases and AWS S3 buckets
 
 ##### Data Science Intern @ LotusFlare
-- Studied engineers' workflow behavior with Jira to increase engagement
-- Built an automated email tool that reminds engineers of ticket deadlines; increased Jira ticket completion rate among engineers by 30 percent
-- Reported data analysis findings in bi-weekly meetings to 30+ engineers and product managers
 
 #### **Projects** | [Link to all projects](https://jasonkyungkim.github.io/projects.html):
 
