@@ -4,12 +4,6 @@ output:
   html_notebook: default
 ---
 
-```{r}
-
-```
-
-
-
 267-453-6620 | ckim4@g.harvard.edu | [my website](https://jasonkyungkim.github.io) | [linkedin](https://www.linkedin.com/in/jasonkyungkim/) | [github](https://github.com/jasonkyungkim)
 
 <!-- #### Education -->
@@ -31,22 +25,12 @@ output:
 
 #### **Experience**:
 
-##### Data Science Intern @ The Hershey Company
+- Data Science Intern @ The Hershey Company
 
-##### Undergraduate Researcher @ Steve Wang Lab | [View Research Poster](https://jasonkyungkim.github.io/whale_poster.pdf)
+- Undergraduate Researcher @ Steve Wang Lab | [View Research Poster](https://jasonkyungkim.github.io/whale_poster.pdf)
   
-##### Data Engineering Intern @ Telnyx
+- Data Engineering Intern @ Telnyx
 
-##### Data Science Intern @ LotusFlare
+- Data Science Intern @ LotusFlare
 
-#### **Projects** | [Link to all projects](https://jasonkyungkim.github.io/projects.html):
-
-##### The Interconnectedness of Deforestation, Ocean Levels, and Carbon Emissions (In Progress) | [View on Github](https://github.com/jasonkyungkim/climate_challenge)
-- Exploring the relationship between deforestation, rising ocean levels, and increasing carbon emissions with ML models
-
-##### Predicting the English Premier League Table (In progress) | [View on Github](https://nbviewer.org/github/jasonkyungkim/pl_prediction/blob/main/pl_stadings.ipynb)
-- Use machine learning models such as XGBoost and Neural Networks to predict Premier League standings
-
-##### The Manchester United Diagnosis | [View on Github](https://nbviewer.org/github/jasonkyungkim/manchester-data/blob/main/manutd_analysis.ipynb)
-- Performed Exploratory Data Analysis (EDA) on football data, scraped from online with BeautifulSoup
-- Found that United overspent on players with inflated-stats but little actual value which lead to poor performances
+#### [**View projects**](https://jasonkyungkim.github.io/projects.html)

@@ -1682,23 +1682,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1758,10 +1752,6 @@ display: none;
 
 
 <!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <p>267-453-6620 | <a href="mailto:ckim4@g.harvard.edu" class="email">ckim4@g.harvard.edu</a> | <a href="https://jasonkyungkim.github.io">my website</a> | <a href="https://www.linkedin.com/in/jasonkyungkim/">linkedin</a> | <a href="https://github.com/jasonkyungkim">github</a></p>
 <!-- #### Education -->
 <!-- Harvard University, SM in Data Science                  Dec 2023 -->
@@ -1793,58 +1783,21 @@ graduate studies</li>
 </div>
 <div id="experience" class="section level4">
 <h4><strong>Experience</strong>:</h4>
-<div id="data-science-intern-the-hershey-company" class="section level5">
-<h5>Data Science Intern @ The Hershey Company</h5>
-
-</div>
-<div id="undergraduate-researcher-steve-wang-lab-view-research-poster" class="section level5">
-<h5>Undergraduate Researcher @ Steve Wang Lab | <a href="https://jasonkyungkim.github.io/whale_poster.pdf">View Research
-Poster</a></h5>
-
-</div>
-<div id="data-engineering-intern-telnyx" class="section level5">
-<h5>Data Engineering Intern @ Telnyx</h5>
-
-</div>
-<div id="data-science-intern-lotusflare" class="section level5">
-<h5>Data Science Intern @ LotusFlare</h5>
-
-</div>
-</div>
-<div id="projects-link-to-all-projects" class="section level4">
-<h4><strong>Projects</strong> | <a href="https://jasonkyungkim.github.io/projects.html">Link to all
-projects</a>:</h4>
-<div id="the-interconnectedness-of-deforestation-ocean-levels-and-carbon-emissions-in-progress-view-on-github" class="section level5">
-<h5>The Interconnectedness of Deforestation, Ocean Levels, and Carbon
-Emissions (In Progress) | <a href="https://github.com/jasonkyungkim/climate_challenge">View on
-Github</a></h5>
 <ul>
-<li>Exploring the relationship between deforestation, rising ocean
-levels, and increasing carbon emissions with ML models</li>
+<li><p>Data Science Intern @ The Hershey Company</p></li>
+<li><p>Undergraduate Researcher @ Steve Wang Lab | <a href="https://jasonkyungkim.github.io/whale_poster.pdf">View Research
+Poster</a></p></li>
+<li><p>Data Engineering Intern @ Telnyx</p></li>
+<li><p>Data Science Intern @ LotusFlare</p></li>
 </ul>
 </div>
-<div id="predicting-the-english-premier-league-table-in-progress-view-on-github" class="section level5">
-<h5>Predicting the English Premier League Table (In progress) | <a href="https://nbviewer.org/github/jasonkyungkim/pl_prediction/blob/main/pl_stadings.ipynb">View
-on Github</a></h5>
-<ul>
-<li>Use machine learning models such as XGBoost and Neural Networks to
-predict Premier League standings</li>
-</ul>
-</div>
-<div id="the-manchester-united-diagnosis-view-on-github" class="section level5">
-<h5>The Manchester United Diagnosis | <a href="https://nbviewer.org/github/jasonkyungkim/manchester-data/blob/main/manutd_analysis.ipynb">View
-on Github</a></h5>
-<ul>
-<li>Performed Exploratory Data Analysis (EDA) on football data, scraped
-from online with BeautifulSoup</li>
-<li>Found that United overspent on players with inflated-stats but
-little actual value which lead to poor performances</li>
-</ul>
+<div id="view-projects" class="section level4">
+<h4><a href="https://jasonkyungkim.github.io/projects.html"><strong>View
+projects</strong></a></h4>
 <!-- rnb-text-end -->
 </div>
-</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNob25na3l1bmcgSmFzb24gS2ltIg0Kb3V0cHV0Og0KICBodG1sX25vdGVib29rOiBkZWZhdWx0DQotLS0NCg0KYGBge3J9DQoNCmBgYA0KDQoNCg0KMjY3LTQ1My02NjIwIHwgY2tpbTRAZy5oYXJ2YXJkLmVkdSB8IFtteSB3ZWJzaXRlXShodHRwczovL2phc29ua3l1bmdraW0uZ2l0aHViLmlvKSB8IFtsaW5rZWRpbl0oaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2phc29ua3l1bmdraW0vKSB8IFtnaXRodWJdKGh0dHBzOi8vZ2l0aHViLmNvbS9qYXNvbmt5dW5na2ltKQ0KDQo8IS0tICMjIyMgRWR1Y2F0aW9uIC0tPg0KPCEtLSBIYXJ2YXJkIFVuaXZlcnNpdHksIFNNIGluIERhdGEgU2NpZW5jZSAgICAgICAgICAgICAgICAgIERlYyAyMDIzIC0tPg0KDQojIyMjICoqRWR1Y2F0aW9uKio6DQoNCi0gKipIYXJ2YXJkIFVuaXZlcnNpdHkqKiwgU00gaW4gRGF0YSBTY2llbmNlICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQotICoqU3dhcnRobW9yZSBDb2xsZWdlKiosIEJBIGluIE1hdGhlbWF0aWNzIGFuZCBTdGF0aXN0aWNzDQogICogKipTdXJkbmEgU3VtbWVyIEZlbGxvdyoqICYgKipMZWVkb20gRmVsbG93Kio6IHJlY2VpdmVkIHNjaG9sYXJzaGlwIGZvciBkYXRhIHNjaWVuY2UgcmVzZWFyY2ggYW5kIGdyYWR1YXRlIHN0dWRpZXMNCiAgKiAqKlRlYWNoaW5nIEFzc2lzdGFudCoqOiANCiAgICAtIE1BVEggMzk6IERpc2NyZXRlIE1hdGhlbWF0aWNzIA0KICAgIC0gQWxsIHN0YXRpc3RpY3MgY291cnNlcyBhdCB0aGUgY29sbGVnZSwgaW5jbHVkaW5nOiANCiAgICAgIC0gU1RBVCAwMTE6IFN0YXRpc3RpY2FsIE1ldGhvZHMgSQ0KICAgICAgLSBTVEFUIDAyMTogU3RhdGlzdGljYWwgTWV0aG9kcyBJSQ0KICAgICAgLSBTVEFUIDA1MTogUHJvYmFiaWxpdHkgDQogICAgICAtIFNUQVQgMDYxOiBNYXRoZW1hdGljYWwgU3RhdGlzdGljcyBJDQogICAgICAtIFNUQVQgMTExOiBNYXRoZW1hdGljYWwgU3RhdGlzdGljcyBJSQ0KDQojIyMjICoqRXhwZXJpZW5jZSoqOg0KDQojIyMjIyBEYXRhIFNjaWVuY2UgSW50ZXJuIEAgVGhlIEhlcnNoZXkgQ29tcGFueQ0KICAtIExldmVyYWdlIGJlaGF2aW9yYWwgZGF0YSB0byBwcmVkaWN0IHVzZXJz4oCZIHNhdGlzZmFjdGlvbiB3aXRoIHRoZWlyIGFkIGV4cGVyaWVuY2UNCg0KIyMjIyMgVW5kZXJncmFkdWF0ZSBSZXNlYXJjaGVyIEAgU3RldmUgV2FuZyBMYWIgfCBbVmlldyBSZXNlYXJjaCBQb3N0ZXJdKGh0dHBzOi8vamFzb25reXVuZ2tpbS5naXRodWIuaW8vd2hhbGVfcG9zdGVyLnBkZikNCiAgLSBFc3RpbWF0ZWQgdGhlIHBvcHVsYXRpb24gc2l6ZSBvZiBOb3J0aCBBdGxhbnRpYyByaWdodCB3aGFsZXMsIGFuIGVuZGFuZ2VyZWQgc3BlY2llcywgdXNpbmcgbG9naXN0aWMgcmVncmVzc2lvbiB1bmRlciBhIEJheWVzaWFuIGZyYW1ld29yay4NCiAgLSBGb3VuZCBlcnJvcnMgaW4gdGhlIE5vcnRoIEF0bGFudGljIFJpZ2h0IFdoYWxlIENvbnNvcnRpdW0gKE5BUldDKSBkYXRhc2V0IHRoYXQgY29udHJhZGljdGVkIHJlbGV2YW50IHBhcGVyczsgcmVwb3J0ZWQgdG8gTkFSV0MgZm9yIGNvcnJlY3Rpb24NCiAgLSBDb21wdXRlZCBwb2ludCBlc3RpbWF0ZSB0aGF0IHdhcyB3aXRoaW4gdGhlIDk1XCUgY29uZmlkZW5jZSBpbnRlcnZhbCBvZiBvdGhlciB0b3AgTkFSV0MgcGFwZXJzJyBtb2RlbHMNCiAgLSBBZGRlZCAxMyBuZXcgZmVhdHVyZXMgYW5kIGNvbnRyb2xsZWQgbXVsdGljb2xpbmVhcml0eSwgcmVkdWNpbmcgdGhlIGZhbHNlIHBvc2l0aXZlIHJhdGUgYnkgNjBcJSwgd2hpbGUga2VlcGluZyB0aGUgZmFsc2UgbmVnYXRpdmUgdGhlIHNhbWUNCiAgLSBJbXBsZW1lbnRlZCBhIHBhcmFsbGVsaXplZCBhbGdvcml0aG0gdGhhdCBpbXByb3ZlZCBydW50aW1lIG9mIHRoZSBtYWluIHNpbXVsYXRpb24gYWxnb3JpdGhtIGJ5IDQwXCUNCiAgLSBQcmVzZW50ZWQgcmVzdWx0cyB0byBhbiBhdWRpZW5jZSBvZiA0NTArIGF0IHRoZSBhbm51YWwgTkFSV0MgY29uZmVyZW5jZQ0KICANCiMjIyMjIERhdGEgRW5naW5lZXJpbmcgSW50ZXJuIEAgVGVsbnl4DQotIE9uZSBvZiB0aGUgdGhyZWUgZm91bmRpbmcgbWVtYmVycyBvZiB0aGUgZGF0YSBlbmdpbmVlcmluZyB0ZWFtDQotIERldmVsb3BlZCBBaXJmbG93IHRhc2tzIGFuZCBidWlsdCBzdXBwb3J0aW5nIHBpcGVsaW5lcyB0byBhdXRvbWF0ZSBnZXR0aW5nIGRhdGEgZnJvbSBkaWZmZXJlbnQgaW50ZXJuYWwgYW5kIGV4dGVybmFsIEFQSSBlbmRwb2ludHMgdG8gcHJvY2VzcyBhbmQgYmFja3VwIGludG8gdGhlIFBvc3RncmVTUUwgZGF0YWJhc2VzIGFuZCBBV1MgUzMgYnVja2V0cw0KDQojIyMjIyBEYXRhIFNjaWVuY2UgSW50ZXJuIEAgTG90dXNGbGFyZQ0KLSBTdHVkaWVkIGVuZ2luZWVycycgd29ya2Zsb3cgYmVoYXZpb3Igd2l0aCBKaXJhIHRvIGluY3JlYXNlIGVuZ2FnZW1lbnQNCi0gQnVpbHQgYW4gYXV0b21hdGVkIGVtYWlsIHRvb2wgdGhhdCByZW1pbmRzIGVuZ2luZWVycyBvZiB0aWNrZXQgZGVhZGxpbmVzOyBpbmNyZWFzZWQgSmlyYSB0aWNrZXQgY29tcGxldGlvbiByYXRlIGFtb25nIGVuZ2luZWVycyBieSAzMCBwZXJjZW50DQotIFJlcG9ydGVkIGRhdGEgYW5hbHlzaXMgZmluZGluZ3MgaW4gYmktd2Vla2x5IG1lZXRpbmdzIHRvIDMwKyBlbmdpbmVlcnMgYW5kIHByb2R1Y3QgbWFuYWdlcnMNCg0KIyMjIyAqKlByb2plY3RzKiogfCBbTGluayB0byBhbGwgcHJvamVjdHNdKGh0dHBzOi8vamFzb25reXVuZ2tpbS5naXRodWIuaW8vcHJvamVjdHMuaHRtbCk6DQoNCiMjIyMjIFRoZSBJbnRlcmNvbm5lY3RlZG5lc3Mgb2YgRGVmb3Jlc3RhdGlvbiwgT2NlYW4gTGV2ZWxzLCBhbmQgQ2FyYm9uIEVtaXNzaW9ucyAoSW4gUHJvZ3Jlc3MpIHwgW1ZpZXcgb24gR2l0aHViXShodHRwczovL2dpdGh1Yi5jb20vamFzb25reXVuZ2tpbS9jbGltYXRlX2NoYWxsZW5nZSkNCi0gRXhwbG9yaW5nIHRoZSByZWxhdGlvbnNoaXAgYmV0d2VlbiBkZWZvcmVzdGF0aW9uLCByaXNpbmcgb2NlYW4gbGV2ZWxzLCBhbmQgaW5jcmVhc2luZyBjYXJib24gZW1pc3Npb25zIHdpdGggTUwgbW9kZWxzDQoNCiMjIyMjIFByZWRpY3RpbmcgdGhlIEVuZ2xpc2ggUHJlbWllciBMZWFndWUgVGFibGUgKEluIHByb2dyZXNzKSB8IFtWaWV3IG9uIEdpdGh1Yl0oaHR0cHM6Ly9uYnZpZXdlci5vcmcvZ2l0aHViL2phc29ua3l1bmdraW0vcGxfcHJlZGljdGlvbi9ibG9iL21haW4vcGxfc3RhZGluZ3MuaXB5bmIpDQotIFVzZSBtYWNoaW5lIGxlYXJuaW5nIG1vZGVscyBzdWNoIGFzIFhHQm9vc3QgYW5kIE5ldXJhbCBOZXR3b3JrcyB0byBwcmVkaWN0IFByZW1pZXIgTGVhZ3VlIHN0YW5kaW5ncw0KDQojIyMjIyBUaGUgTWFuY2hlc3RlciBVbml0ZWQgRGlhZ25vc2lzIHwgW1ZpZXcgb24gR2l0aHViXShodHRwczovL25idmlld2VyLm9yZy9naXRodWIvamFzb25reXVuZ2tpbS9tYW5jaGVzdGVyLWRhdGEvYmxvYi9tYWluL21hbnV0ZF9hbmFseXNpcy5pcHluYikNCi0gUGVyZm9ybWVkIEV4cGxvcmF0b3J5IERhdGEgQW5hbHlzaXMgKEVEQSkgb24gZm9vdGJhbGwgZGF0YSwgc2NyYXBlZCBmcm9tIG9ubGluZSB3aXRoIEJlYXV0aWZ1bFNvdXANCi0gRm91bmQgdGhhdCBVbml0ZWQgb3ZlcnNwZW50IG9uIHBsYXllcnMgd2l0aCBpbmZsYXRlZC1zdGF0cyBidXQgbGl0dGxlIGFjdHVhbCB2YWx1ZSB3aGljaCBsZWFkIHRvIHBvb3IgcGVyZm9ybWFuY2Vz</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQ2hvbmdreXVuZyBKYXNvbiBLaW0iCm91dHB1dDoKICBodG1sX25vdGVib29rOiBkZWZhdWx0Ci0tLQoKMjY3LTQ1My02NjIwIHwgY2tpbTRAZy5oYXJ2YXJkLmVkdSB8IFtteSB3ZWJzaXRlXShodHRwczovL2phc29ua3l1bmdraW0uZ2l0aHViLmlvKSB8IFtsaW5rZWRpbl0oaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2phc29ua3l1bmdraW0vKSB8IFtnaXRodWJdKGh0dHBzOi8vZ2l0aHViLmNvbS9qYXNvbmt5dW5na2ltKQoKPCEtLSAjIyMjIEVkdWNhdGlvbiAtLT4KPCEtLSBIYXJ2YXJkIFVuaXZlcnNpdHksIFNNIGluIERhdGEgU2NpZW5jZSAgICAgICAgICAgICAgICAgIERlYyAyMDIzIC0tPgoKIyMjIyAqKkVkdWNhdGlvbioqOgoKLSAqKkhhcnZhcmQgVW5pdmVyc2l0eSoqLCBTTSBpbiBEYXRhIFNjaWVuY2UgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKLSAqKlN3YXJ0aG1vcmUgQ29sbGVnZSoqLCBCQSBpbiBNYXRoZW1hdGljcyBhbmQgU3RhdGlzdGljcwogICogKipTdXJkbmEgU3VtbWVyIEZlbGxvdyoqICYgKipMZWVkb20gRmVsbG93Kio6IHJlY2VpdmVkIHNjaG9sYXJzaGlwIGZvciBkYXRhIHNjaWVuY2UgcmVzZWFyY2ggYW5kIGdyYWR1YXRlIHN0dWRpZXMKICAqICoqVGVhY2hpbmcgQXNzaXN0YW50Kio6IAogICAgLSBNQVRIIDM5OiBEaXNjcmV0ZSBNYXRoZW1hdGljcyAKICAgIC0gQWxsIHN0YXRpc3RpY3MgY291cnNlcyBhdCB0aGUgY29sbGVnZSwgaW5jbHVkaW5nOiAKICAgICAgLSBTVEFUIDAxMTogU3RhdGlzdGljYWwgTWV0aG9kcyBJCiAgICAgIC0gU1RBVCAwMjE6IFN0YXRpc3RpY2FsIE1ldGhvZHMgSUkKICAgICAgLSBTVEFUIDA1MTogUHJvYmFiaWxpdHkgCiAgICAgIC0gU1RBVCAwNjE6IE1hdGhlbWF0aWNhbCBTdGF0aXN0aWNzIEkKICAgICAgLSBTVEFUIDExMTogTWF0aGVtYXRpY2FsIFN0YXRpc3RpY3MgSUkKCiMjIyMgKipFeHBlcmllbmNlKio6CgotIERhdGEgU2NpZW5jZSBJbnRlcm4gQCBUaGUgSGVyc2hleSBDb21wYW55CgotIFVuZGVyZ3JhZHVhdGUgUmVzZWFyY2hlciBAIFN0ZXZlIFdhbmcgTGFiIHwgW1ZpZXcgUmVzZWFyY2ggUG9zdGVyXShodHRwczovL2phc29ua3l1bmdraW0uZ2l0aHViLmlvL3doYWxlX3Bvc3Rlci5wZGYpCiAgCi0gRGF0YSBFbmdpbmVlcmluZyBJbnRlcm4gQCBUZWxueXgKCi0gRGF0YSBTY2llbmNlIEludGVybiBAIExvdHVzRmxhcmUKCiMjIyMgWyoqVmlldyBwcm9qZWN0cyoqXShodHRwczovL2phc29ua3l1bmdraW0uZ2l0aHViLmlvL3Byb2plY3RzLmh0bWwpCg==</div>
 
 
 
