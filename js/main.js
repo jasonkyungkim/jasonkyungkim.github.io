@@ -1,6 +1,8 @@
 var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedin</a>')
     var github = $('<a href = "https://github.com/jasonkyungkim">@github</a>')
     var projects = $('<a href = "https://jasonkyungkim.github.io/projects.html">@my projects</a>')
+    var plots = $('<a href = "https://jasonkyungkim.github.io/plots.html">@my plots</a>')
+
     var spotify = $('<a href = "https://open.spotify.com/playlist/3MY1LQ6JaJBe2T8b1XMAWx">@my playlist</a>')
     var resume = $('<a href = "https://jasonkyungkim.github.io/resume.nb.html">@my resume</a>')
 
@@ -11,6 +13,7 @@ var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedi
                 + '  linkedin\n\n' 
                 + '  github\n\n' 
                 + '  projects\n\n'
+                + '  plots \n\n'
                 + '  ------------------\n\n'
                 + '  (meme-related prompts... like "hello there")\n\n'
                 + '  favorite {var}: replace {var} with food, movie, team, school, singer, etc...\n\n'
@@ -28,6 +31,9 @@ var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedi
     },
     github: function(){
         this.echo(github);
+    },     
+    plots: function(){
+        this.echo(plots);
     },            
 
     projects: function(){
