@@ -13,15 +13,13 @@ var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedi
                 + '  linkedin\n\n' 
                 + '  github\n\n' 
                 + '  projects\n\n'
-                + '  plots \n\n'
+                + '  viz (for a random plot/graph I made over the years)\n\n'
                 + '  ------------------\n\n'
                 + '  (meme-related prompts... like "hello there")\n\n'
                 + '  favorite {var}: replace {var} with food, movie, team, school, singer, etc...\n\n'
-                + '  selfie\n\n'
                 + '  ------------------\n\n'
                 + '  use \'clear\' to get a blank screen\n\n'
-                + '  get creative!\n\n'
-                + '  I\'m in the process of adding more acceptable and fun commands');},
+                + '  get creative! there are secret commands\n\n');},
                 
     linkedin: function(){
         this.echo(linkedin);
@@ -33,9 +31,10 @@ var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedi
         this.echo(github);
     },     
     plots: function(){
-        this.echo(plots);
-    },            
-
+      random_file = Math.floor(Math.random() * 19) + 1;
+      this.echo($('<img src="img/plots/' +random_file +'.png">'));
+    }, 
+   
     projects: function(){
         this.echo(projects);
     },
