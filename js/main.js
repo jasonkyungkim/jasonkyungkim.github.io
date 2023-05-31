@@ -1,4 +1,4 @@
-var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedin</a>')
+    var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedin</a>')
     var github = $('<a href = "https://github.com/jasonkyungkim">@github</a>')
     var projects = $('<a href = "https://jasonkyungkim.github.io/projects.html">@my projects</a>')
     var plots = $('<a href = "https://jasonkyungkim.github.io/plots.html">@my plots</a>')
@@ -9,6 +9,7 @@ var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedi
     $('body').terminal({
      help: function () {
                 this.echo('example commands:\n\n'
+                + '  past \n\n'
                 + '  resume\n\n'
                 + '  linkedin\n\n' 
                 + '  github\n\n' 
@@ -18,9 +19,11 @@ var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedi
                 + '  (meme-related prompts... like "hello there")\n\n'
                 + '  favorite {var}: replace {var} with food, movie, team, school, singer, etc...\n\n'
                 + '  ------------------\n\n'
-                + '  use \'clear\' to get a blank screen\n\n'
                 + '  get creative! there are secret commands\n\n');},
-                
+    
+    past: function(){
+          this.echo('BA in Mathematics and Statistics at Swarthmore College');
+    },  
     linkedin: function(){
         this.echo(linkedin);
     },
@@ -30,7 +33,7 @@ var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedi
     github: function(){
         this.echo(github);
     },     
-    plots: function(){
+    viz: function(){
       random_file = Math.floor(Math.random() * 19) + 1;
       this.echo($('<img src="img/plots/' +random_file +'.png">'));
     }, 
@@ -72,9 +75,9 @@ var linkedin = $('<a href = "https://www.linkedin.com/in/jasonkyungkim">@linkedi
           this.echo("Lady Gaga, the Weeknd, Partynextdoor, Drake... and more tbh");
         }
         if (name == "school"){
-          this.echo("swarthmore college :)");
+          this.echo("Swarthmore College :)");
         }
     }
 }, {
-    greetings: 'hello, this is Jason :)' + '\n type \'help\' for help'
+    greetings: 'hello, this is Jason :)' + '\n type \'help\' '
 });
