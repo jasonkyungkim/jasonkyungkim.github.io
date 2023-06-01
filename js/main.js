@@ -14,10 +14,11 @@
                 + '  linkedin\n\n' 
                 + '  github\n\n' 
                 + '  projects\n\n'
-                + '  viz (for a random plot/graph I made over the years)\n\n'
+                + '  hello there\n\n'
+                // + '  viz (for a random plot/graph I made over the years)\n\n'
                 + '  ------------------\n\n'
-                + '  (meme-related prompts... like "hello there")\n\n'
-                + '  favorite {var}: replace {var} with food, movie, team, school, singer, etc...\n\n'
+                // + '  (meme-related prompts... like "hello there")\n\n'
+                + '  favorite {var}: replace {var} with food, movie, team, school, singer, K-pop group, etc...\n\n'
                 + '  ------------------\n\n'
                 + '  get creative! there are secret commands\n\n');},
     
@@ -33,10 +34,10 @@
     github: function(){
         this.echo(github);
     },     
-    viz: function(){
-      random_file = Math.floor(Math.random() * 19) + 1;
-      this.echo($('<img src="img/plots/' +random_file +'.png">'));
-    }, 
+    // viz: function(){
+    //   random_file = Math.floor(Math.random() * 19) + 1;
+    //   this.echo($('<img src="img/plots/' +random_file +'.png">'));
+    // }, 
    
     projects: function(){
         this.echo(projects);
@@ -55,16 +56,16 @@
         if (name == "there"){
             this.echo("general kenobi")
         } else{
-          this.echo("hello " + name)
+          this.echo("hello!")
         }
     },
     favorite: function(name) {
         if (name == "food"){
-            this.echo("chicken");
+            this.echo("fried chicken. spicy noodles. anything Asian, really");
         } 
 
         if (name == "team"){
-          this.echo("manchester united");
+          this.echo("Manchester United");
         }
         
         if (name == "movie"){
@@ -76,6 +77,9 @@
         }
         if (name == "school"){
           this.echo("Swarthmore College :)");
+        }
+        if (name == "K-pop group"){
+          this.echo("Red Velvet");
         }
     }
 }, {
