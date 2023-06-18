@@ -10,6 +10,7 @@
      help: function () {
                 this.echo('example commands:\n\n'
                 + '  past \n\n'
+                + '  current \n\n'
                 + '  resume\n\n'
                 + '  linkedin\n\n' 
                 + '  github\n\n' 
@@ -18,13 +19,16 @@
                 // + '  viz (for a random plot/graph I made over the years)\n\n'
                 + '  ------------------\n\n'
                 // + '  (meme-related prompts... like "hello there")\n\n'
-                + '  favorite {var}: replace {var} with food, movie, team, school, singer, K-pop group, etc...\n\n'
+                // + '  favorite {var}: replace {var} with food, movie, team, school, singer, etc...\n\n'
                 + '  ------------------\n\n'
                 + '  get creative! there are secret commands\n\n');},
     
     past: function(){
-          this.echo('BA in Mathematics and Statistics at Swarthmore College');
+          this.echo('grew up in Suwon, Korea... received my BA in Mathematics and Statistics at Swarthmore College, where I TAed for statistics classes and participated in research with professors.');
     },  
+    current: function(){
+      this.echo('Data Science Intern at the Hershey Company! Also pursuing my master\'s in data science at Harvard. Exploring cafes and restaurants in Los Angeles' );
+  },
     linkedin: function(){
         this.echo(linkedin);
     },
