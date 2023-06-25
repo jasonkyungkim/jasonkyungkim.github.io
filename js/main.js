@@ -5,6 +5,7 @@
 
     var spotify = $('<a href = "https://open.spotify.com/playlist/3MY1LQ6JaJBe2T8b1XMAWx">@my playlist</a>')
     var resume = $('<a href = "https://jasonkyungkim.github.io/resume.nb.html">@my resume</a>')
+    var ddg = $('<a href = "https://jasonkyungkim.github.io/ddg_dilemma.html">@de gea analysis</a>')
 
     $('body').terminal({
      help: function () {
@@ -18,6 +19,8 @@
                 + '  hello there\n\n'
                 // + '  viz (for a random plot/graph I made over the years)\n\n'
                 + '  ------------------\n\n'
+                + ' If you are a football fan, or better yet a Man United fan, type \'ddg\' to read about my\n'
+                + ' analysis on David De Gea'
                 // + '  (meme-related prompts... like "hello there")\n\n'
                 // + '  favorite {var}: replace {var} with food, movie, team, school, singer, etc...\n\n'
                 + '  ------------------\n\n'
@@ -34,6 +37,9 @@
     },
     resume: function(){
         this.echo(resume);
+    },
+    ddg: function(){
+        this.echo(ddg);
     },
     github: function(){
         this.echo(github);
