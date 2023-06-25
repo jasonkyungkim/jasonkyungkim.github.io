@@ -20,7 +20,7 @@
                 // + '  viz (for a random plot/graph I made over the years)\n\n'
                 + '  ------------------\n\n'
                 + ' If you are a football fan, or better yet a Man United fan, type \'ddg\' to read about my\n'
-                + ' analysis on David De Gea'
+                + ' analysis on David De Gea\n\n'
                 // + '  (meme-related prompts... like "hello there")\n\n'
                 // + '  favorite {var}: replace {var} with food, movie, team, school, singer, etc...\n\n'
                 + '  ------------------\n\n'
