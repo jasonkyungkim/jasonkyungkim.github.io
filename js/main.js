@@ -5,7 +5,7 @@
 
     var spotify = $('<a href = "https://open.spotify.com/playlist/3MY1LQ6JaJBe2T8b1XMAWx">@my playlist</a>')
     var resume = $('<a href = "https://jasonkyungkim.github.io/resume.nb.html">@my resume</a>')
-    var ddg = $('<a href = "https://jasonkyungkim.github.io/ddg_dilemma.html">@de gea analysis</a>')
+    var ddg = $('<a href = "https://nbviewer.org/github/jasonkyungkim/ddg_dilemma/blob/main/ddg_dilemma.ipynb">@de gea analysis</a>')
 
     $('body').terminal({
      help: function () {
