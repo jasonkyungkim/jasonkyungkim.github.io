@@ -8,7 +8,15 @@
 }
 
 
+.btn-link {
+  color: white !important; /* Force green color */
+  transition: color 0.3s ease;
+}
 
+
+.icon {
+  color: inherit;
+}
 /*
  * Base structure
  */
@@ -19,6 +27,12 @@ body {
   /* box-shadow: inset 0 0 100rem black; */
   min-height: 100%;
   /* color: white; */
+}
+
+.btn:hover {
+  background-color: white;
+  color: white !important;
+  box-shadow: 0 3px 16px 0 white;
 }
 
 html{
