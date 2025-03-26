@@ -12,21 +12,7 @@
   font-size: 100%;
 }
 
-.name-container {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2); /* White with 20% opacity */
-  padding: 2.5px 10px 2.5px 16.5px;
-  border-radius: 10px; /* Rounded corners */
-  backdrop-filter: blur(5px); /* Blurred glass effect */
-}
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-/* .btn-secondary:focus {
-    color: #333;
-    text-shadow: none;
-} */
 
 .btn-link {
     color: white !important;
@@ -68,9 +54,7 @@ body {
 
 /* Existing hover and link styles */
 .btn:hover {
-    background-color: rgba(255, 246, 246, 0.906);
     color: rgb(150, 255, 147) !important;
-    box-shadow: 0 3px 16px 0 rgb(164, 255, 164);
     border-radius: 20px; /* Rounded corners */
     backdrop-filter: blur(5px); /* Blurred glass effect */
 }
