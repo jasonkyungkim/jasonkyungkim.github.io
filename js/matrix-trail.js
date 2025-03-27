@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < totalColumns * LAYERS; i++) {
             const size = Math.floor(Math.random() * 12) + 15;
             const letters = Array.from(Array(size)).map(char => generateCharacter());
-            const initialY = -5 00 + (-1 * Math.floor(Math.random() * 500));
+            const initialY = -500 + (-1 * Math.floor(Math.random() * 500));
             // const fastRandomSpeed = ~~(Math.random() * 20);
             // const speed = fastRandomSpeed === 0 ? 40 : 10 + Math.random() * 20;
             const speed = 5 + Math.random() * 5;
