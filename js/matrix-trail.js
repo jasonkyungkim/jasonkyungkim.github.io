@@ -59,9 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < totalColumns * LAYERS; i++) {
             const size = Math.floor(Math.random() * 12) + 15;
             const letters = Array.from(Array(size)).map(char => generateCharacter());
-            const initialY = -1000 + (-1 * Math.floor(Math.random() * 500));
-            const fastRandomSpeed = ~~(Math.random() * 20);
-            const speed = fastRandomSpeed === 0 ? 20 : 10 + Math.random() * 10;
+            const initialY = -5 00 + (-1 * Math.floor(Math.random() * 500));
+            // const fastRandomSpeed = ~~(Math.random() * 20);
+            // const speed = fastRandomSpeed === 0 ? 40 : 10 + Math.random() * 20;
+            const speed = 5 + Math.random() * 5;
             columns.push({
                 y: initialY,
                 letters,
@@ -77,11 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const getColor = (index, array, x) => {
         const size = array.length;
         const COLORS = [
-            "rgba(134, 250, 134, 0.1)",   // Very light green
-            "rgba(50, 255, 50, 0.3)",   // Light green
-            "rgba(197, 249, 197, 0.5)",   // Medium green
-            "rgba(15, 255, 15, 0.7)",   // Darker green
-            "rgba(255, 255, 255)", // Almost white for the last character
+            "rgba(134, 250, 134, 0.05)",   // Very light green
+            "rgba(50, 255, 50, 0.1)",   // Light green
+            "rgba(197, 249, 197, 0.15)",   // Medium green
+            "rgba(15, 255, 15, 0.25)",   // Darker green
+            "rgba(255, 255, 255)",
         ];
         const last = index === size - 1;
         const first = index === 0;
