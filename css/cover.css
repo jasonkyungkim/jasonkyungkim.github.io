@@ -74,10 +74,12 @@ a:visited {
 
 a:hover {
     color: rgba(104, 240, 14, 0.761);
+    text-shadow: 0 0 10px rgb(117, 255, 117);
 }
 
 i:hover {
     color: rgba(187, 255, 141, 0.818);
+    text-shadow: 0 0 10px #0f0;
 }
 
 /* Existing layout and scrollbar styles */
