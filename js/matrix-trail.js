@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const initialY = -500 + (-1 * Math.floor(Math.random() * 500));
             // const fastRandomSpeed = ~~(Math.random() * 20);
             // const speed = fastRandomSpeed === 0 ? 40 : 10 + Math.random() * 20;
-            const speed = 5 + Math.random() * 5;
+            const speed = 5 + Math.random() * 0.5;
             columns.push({
                 y: initialY,
                 letters,
@@ -78,11 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const getColor = (index, array, x) => {
         const size = array.length;
         const COLORS = [
-            "rgba(134, 250, 134, 0.05)",   // Very light green
-            "rgba(50, 255, 50, 0.1)",   // Light green
-            "rgba(197, 249, 197, 0.15)",   // Medium green
-            "rgba(15, 255, 15, 0.25)",   // Darker green
-            "rgba(255, 255, 255)",
+            "rgba(36, 42, 28, 0.05)",   // Very subtle dark green
+            "rgba(65, 123, 62, 0.08)",   // Soft green
+            "rgba(95, 160, 85, 0.12)",   // Gentle green
+            "rgba(120, 200, 110, 0.16)",   // Mild green
+            "rgba(155, 255, 155, 0.22)",   // Lightest green highlight
         ];
         const last = index === size - 1;
         const first = index === 0;
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data.letters.forEach((letter, index, array) => {
                 const isWhite = index === array.length - 1;
                 ctx.fillStyle = getColor(index, array, x);
-                ctx.shadowColor = "#2aa144";
+                ctx.shadowColor = "#adbeb0";
                 ctx.shadowOffsetX = 0;
                 ctx.shadowOffsetY = 0;
                 if (!navigator.userAgent.includes("Firefox/"))

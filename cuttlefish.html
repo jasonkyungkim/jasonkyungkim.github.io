@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X6JS3FMZ6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0X6JS3FMZ6');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cuttlefish - App Experience">
+    <meta name="author" content="jongkyung kim">
+    <title>Cuttlefish</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/cover.css" rel="stylesheet">
+    <style>
+      body {
+        overflow-y: auto !important;
+      }
+
+      .project-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 100vh;
+      }
+
+      .project-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .project-header h1 {
+        color: rgba(33, 255, 126, 0.8);
+        text-shadow: 0 1px 5px rgb(255, 255, 255);
+        margin-bottom: 10px;
+      }
+
+      .project-header p {
+        color: rgba(187, 249, 213, 0.8);
+        text-shadow: 0 0 10px rgb(213, 255, 213);
+      }
+
+      .back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: rgba(187, 249, 213, 0.8);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .back-button:hover {
+        color: rgba(104, 240, 14, 0.761);
+        text-shadow: 0 0 10px rgb(117, 255, 117);
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(33, 255, 126, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(33, 255, 126, 0.6);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery-item video {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Modal styles */
+      .modal-fullscreen-sm-down {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+      }
+
+      .modal-fullscreen-sm-down.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content-custom {
+        max-width: 90%;
+        max-height: 90vh;
+        position: relative;
+        background: transparent;
+      }
+
+      .modal-content-custom img,
+      .modal-content-custom video {
+        max-width: 100%;
+        max-height: 90vh;
+        display: block;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      }
+
+      .close-modal:hover {
+        color: rgba(104, 240, 14, 0.761);
+      }
+    </style>
+  </head>
+  <body class="d-flex text-center text-white bg-dark">
+    <div class="project-container" style="width: 100%;">
+      <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Home
+      </a>
+
+      <div class="project-header">
+        <h1>Cuttlefish</h1>
+        <p>An app-building, data-presenting, design-customizable platform where you can scroll through and interact with your data. 
+            Recommendation engine powered by Gray Whale AI and Product Genius. Built with native Swift and SwiftUI
+        </p>
+      </div>
+
+      <div class="gallery-grid" id="gallery">
+        <!-- Gallery items will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Modal for full-size viewing -->
+    <div class="modal-fullscreen-sm-down" id="imageModal">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <div class="modal-content-custom" id="modalContent"></div>
+    </div>
+
+    <div class="custom-cursor"></div>
+    <canvas id="canvas"></canvas>
+    <script src="js/matrix-trail.js"></script>
+    <script src="js/cursor.js"></script>
+
+    <script>
+      // Gallery items - images and videos from the cuttlefish folder
+      const galleryItems = [
+                { type: 'video', src: 'assets/cuttlefish/ScreenRecording_04-01-2026 19-39-42_1.mp4', alt: 'Video 1' },
+             { type: 'image', src: 'assets/cuttlefish/71700F2A-34EF-4F6F-B961-105374E3DFA0_1_105_c.jpeg', alt: 'Screenshot 4' },
+              { type: 'video', src: 'assets/cuttlefish/ScreenRecording_04-01-2026 19-52-00_1.mp4', alt: 'Video 2' },
+        { type: 'image', src: 'assets/cuttlefish/284F537F-26EB-4074-8961-1613D851D1E7_1_105_c.jpeg', alt: 'Screenshot 1' },
+        { type: 'image', src: 'assets/cuttlefish/45DAEA1A-EAAE-4BB0-A3D4-B35E302598BE_1_105_c.jpeg', alt: 'Screenshot 2' },
+        { type: 'image', src: 'assets/cuttlefish/6B7D6ADA-B71D-4311-BE55-EA5700ECFA3A_1_105_c.jpeg', alt: 'Screenshot 3' },
+   
+        { type: 'image', src: 'assets/cuttlefish/A90EDB15-7390-4BB5-B8FD-D23DD6CF9612_1_105_c.jpeg', alt: 'Screenshot 5' },
+
+       
+        { type: 'video', src: 'assets/cuttlefish/ScreenRecording_04-01-2026 20-05-39_1.mp4', alt: 'Video 3' },
+        { type: 'image', src: 'assets/cuttlefish/FEA940FE-741E-4CEC-8144-C016FBAB9EA1_1_105_c.jpeg', alt: 'Screenshot 9' }
+      ];
+
+      // Load gallery
+      function loadGallery() {
+        const gallery = document.getElementById('gallery');
+        galleryItems.forEach((item, index) => {
+          const div = document.createElement('div');
+          div.className = 'gallery-item';
+          
+          if (item.type === 'image') {
+            div.innerHTML = `<img src="${item.src}" alt="${item.alt}" onclick="openModal(${index})">`;
+          } else if (item.type === 'video') {
+            div.innerHTML = `<video controls onclick="openModal(${index})"><source src="${item.src}" type="video/mp4"></video>`;
+          }
+          
+          gallery.appendChild(div);
+        });
+      }
+
+      // Open modal
+      function openModal(index) {
+        const modal = document.getElementById('imageModal');
+        const modalContent = document.getElementById('modalContent');
+        const item = galleryItems[index];
+        
+        if (item.type === 'image') {
+          modalContent.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
+        } else if (item.type === 'video') {
+          modalContent.innerHTML = `<video controls autoplay style="width: 100%; height: auto;"><source src="${item.src}" type="video/mp4"></video>`;
+        }
+        
+        modal.classList.add('open');
+      }
+
+      // Close modal
+      function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.classList.remove('open');
+      }
+
+      // Close modal on background click
+      document.getElementById('imageModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeModal();
+        }
+      });
+
+      // Load gallery on page load
+      document.addEventListener('DOMContentLoaded', loadGallery);
+    </script>
+  </body>
+</html>
