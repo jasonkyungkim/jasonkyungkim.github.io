@@ -30,6 +30,7 @@
 
 .project-link {
   display: inline-block;
+  margin: 0 20px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 

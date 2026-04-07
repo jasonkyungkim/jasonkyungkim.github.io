@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X6JS3FMZ6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0X6JS3FMZ6');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sym - App Experience">
+    <meta name="author" content="jongkyung kim">
+    <title>Sym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/cover.css" rel="stylesheet">
+    <style>
+      body {
+        overflow-y: auto !important;
+      }
+
+      .project-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: 100vh;
+      }
+
+      .project-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .project-header h1 {
+        color: rgba(33, 255, 126, 0.8);
+        text-shadow: 0 1px 5px rgb(255, 255, 255);
+        margin-bottom: 10px;
+      }
+
+      .project-header p {
+        color: rgba(187, 249, 213, 0.8);
+        text-shadow: 0 0 10px rgb(213, 255, 213);
+      }
+
+      .back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: rgba(187, 249, 213, 0.8);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .back-button:hover {
+        color: rgba(104, 240, 14, 0.761);
+        text-shadow: 0 0 10px rgb(117, 255, 117);
+      }
+
+      .gallery-section {
+        margin-bottom: 50px;
+      }
+
+      .gallery-section-title {
+        color: rgba(33, 255, 126, 0.8);
+        text-shadow: 0 1px 5px rgb(255, 255, 255);
+        margin: 30px 0 20px 0;
+        text-align: center;
+        font-size: 1.3em;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(33, 255, 126, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(33, 255, 126, 0.6);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery-item video {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Modal styles */
+      .modal-fullscreen-sm-down {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+      }
+
+      .modal-fullscreen-sm-down.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content-custom {
+        max-width: 90%;
+        max-height: 90vh;
+        position: relative;
+        background: transparent;
+      }
+
+      .modal-content-custom img,
+      .modal-content-custom video {
+        max-width: 100%;
+        max-height: 90vh;
+        display: block;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      }
+
+      .close-modal:hover {
+        color: rgba(104, 240, 14, 0.761);
+      }
+    </style>
+  </head>
+  <body class="d-flex text-center text-white bg-dark">
+    <div class="project-container" style="width: 100%;">
+      <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Home
+      </a>
+
+      <div class="project-header">
+        <h1>Sym</h1>
+        <p>Reimagining Web App to Mobile Experience</p>
+      </div>
+
+      <!-- Mobile App Section -->
+      <div class="gallery-section">
+        <div class="gallery-section-title">Mobile App Design</div>
+        <div class="gallery-grid" id="mobileGallery">
+          <!-- Mobile gallery items will be loaded here -->
+        </div>
+      </div>
+
+      <!-- Original Web App Section -->
+      <div class="gallery-section">
+        <div class="gallery-section-title">Original Web App</div>
+        <div class="gallery-grid" id="webGallery">
+          <!-- Web app gallery items will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for full-size viewing -->
+    <div class="modal-fullscreen-sm-down" id="imageModal">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <div class="modal-content-custom" id="modalContent"></div>
+    </div>
+
+    <div class="custom-cursor"></div>
+    <canvas id="canvas"></canvas>
+    <script src="js/matrix-trail.js"></script>
+    <script src="js/cursor.js"></script>
+
+    <script>
+      // Gallery items - Mobile app images
+      const mobileItems = [
+        { type: 'image', src: 'assets/dram/IMG_5139.PNG', alt: 'Mobile 1' },
+        { type: 'image', src: 'assets/dram/IMG_5140.PNG', alt: 'Mobile 2' },
+        { type: 'image', src: 'assets/dram/IMG_5141.PNG', alt: 'Mobile 3' },
+        { type: 'image', src: 'assets/dram/IMG_5142.PNG', alt: 'Mobile 4' },
+        { type: 'image', src: 'assets/dram/IMG_5144.PNG', alt: 'Mobile 5' },
+        { type: 'image', src: 'assets/dram/IMG_5145.PNG', alt: 'Mobile 6' },
+        { type: 'image', src: 'assets/dram/IMG_5146.PNG', alt: 'Mobile 7' },
+        { type: 'image', src: 'assets/dram/IMG_5147.PNG', alt: 'Mobile 8' },
+        { type: 'image', src: 'assets/dram/Simulator Screenshot - iPhone 16 Plus - 2024-10-15 at 00.59.18.png', alt: 'Simulator 1' },
+        { type: 'image', src: 'assets/dram/Simulator Screenshot - iPhone 16 Plus - 2024-10-15 at 00.59.36.png', alt: 'Simulator 2' },
+        { type: 'image', src: 'assets/dram/Simulator Screenshot - iPhone 16 Plus - 2024-10-15 at 00.59.42.png', alt: 'Simulator 3' },
+        { type: 'image', src: 'assets/dram/Simulator Screenshot - iPhone 16 Plus - 2024-10-15 at 00.59.55.png', alt: 'Simulator 4' },
+        { type: 'image', src: 'assets/dram/Simulator Screenshot - iPhone 16 Plus - 2024-10-15 at 01.00.00.png', alt: 'Simulator 5' },
+        { type: 'image', src: 'assets/dram/Simulator Screenshot - iPhone 16 Plus - 2024-10-15 at 01.03.44.png', alt: 'Simulator 6' },
+        { type: 'image', src: 'assets/dram/Simulator Screenshot - iPhone 16 Plus - 2024-10-15 at 01.13.33.png', alt: 'Simulator 7' },
+        { type: 'image', src: 'assets/dram/Simulator Screenshot - iPhone 16 Plus - 2024-10-15 at 01.14.27.png', alt: 'Simulator 8' }
+      ];
+
+      // Gallery items - Original web app images
+      const webItems = [
+        { type: 'image', src: 'assets/dram/original_web_app/1.jpeg', alt: 'Web 1' },
+        { type: 'image', src: 'assets/dram/original_web_app/2.jpeg', alt: 'Web 2' },
+        { type: 'image', src: 'assets/dram/original_web_app/3.jpeg', alt: 'Web 3' },
+        { type: 'image', src: 'assets/dram/original_web_app/4.jpeg', alt: 'Web 4' }
+      ];
+
+      // Load galleries
+      function loadGalleries() {
+        loadGalleryItems('mobileGallery', mobileItems);
+        loadGalleryItems('webGallery', webItems);
+      }
+
+      function loadGalleryItems(containerId, items) {
+        const gallery = document.getElementById(containerId);
+        items.forEach((item, index) => {
+          const div = document.createElement('div');
+          div.className = 'gallery-item';
+          
+          if (item.type === 'image') {
+            div.innerHTML = `<img src="${item.src}" alt="${item.alt}" onclick="openModal('${item.src}', '${item.type}')">`;
+          } else if (item.type === 'video') {
+            div.innerHTML = `<video controls onclick="openModal('${item.src}', '${item.type}')"><source src="${item.src}" type="video/mp4"></video>`;
+          }
+          
+          gallery.appendChild(div);
+        });
+      }
+
+      // Open modal
+      function openModal(src, type) {
+        const modal = document.getElementById('imageModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        if (type === 'image') {
+          modalContent.innerHTML = `<img src="${src}" alt="Full view">`;
+        } else if (type === 'video') {
+          modalContent.innerHTML = `<video controls autoplay style="width: 100%; height: auto;"><source src="${src}" type="video/mp4"></video>`;
+        }
+        
+        modal.classList.add('open');
+      }
+
+      // Close modal
+      function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.classList.remove('open');
+      }
+
+      // Close modal on background click
+      document.getElementById('imageModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeModal();
+        }
+      });
+
+      // Load galleries on page load
+      document.addEventListener('DOMContentLoaded', loadGalleries);
+    </script>
+  </body>
+</html>
